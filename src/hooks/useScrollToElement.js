@@ -1,5 +1,6 @@
 import React from 'react';
 import { useSpring } from 'react-spring';
+import { windowObject, documentObject } from '../utils/ssrObjects';
 
 function useScrollToElement() {
   const [scrolling, setScrolling] = React.useState(false);
@@ -8,38 +9,36 @@ function useScrollToElement() {
   }));
 
   const onClickHandler = id => {
-    if (typeof window !== null) {
-      var element = id;
-      if(typeof id === 'string') {
-        element = document.querySelector(`#${id}`);
-      }
-
-      setScrolling(true);
-
-      setY({
-        y: element.offsetTop,
-        reset: true,
-        from: { y: window.scrollY },
-        onRest: () => setScrolling(false),
-        onFrame: props => window.scroll(0, props.y),
-      });
+    let element = id;
+    if (typeof id === 'string') {
+      element = documentObject.querySelector(`#${id}`);
     }
+
+    setScrolling(true);
+
+    setY({
+      y: element.offsetTop,
+      reset: true,
+      from: { y: windowObject.scrollY },
+      onRest: () => setScrolling(false),
+      onFrame: props => windowObject.scroll(0, props.y),
+    });
   };
 
   const onWheelHandler = () => {
-    if (scrolling && typeof window !== null) {
+    if (scrolling) {
       setY({
-        y: window.scrollY,
+        y: windowObject.scrollY,
         reset: true,
-        from: { y: window.scrollY },
-        onFrame: props => window.scroll(window.scrollY, props.y),
+        from: { y: windowObject.scrollY },
+        onFrame: props => windowObject.scroll(windowObject.scrollY, props.y),
       });
     }
   };
 
   React.useEffect(() => {
-    document.addEventListener('wheel', onWheelHandler);
-    return () => document.removeEventListener('wheel', onWheelHandler);
+    documentObject.addEventListener('wheel', onWheelHandler);
+    return () => documentObject.removeEventListener('wheel', onWheelHandler);
   });
 
   return onClickHandler;
