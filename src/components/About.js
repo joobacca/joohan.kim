@@ -58,9 +58,6 @@ const About = () => {
   const scrollTo = useScrollToElement();
   return (
     <SectionContainer id="about">
-      {/* <ScrollAnimation showOnce>
-        
-      </ScrollAnimation> */}
       <Title color={about}>About myself</Title>
       <Container>
         <FlexChildren>
@@ -77,7 +74,9 @@ const About = () => {
           </AboutText>
           <AboutText>
             My main skills consist of WordPress theme development and building
-            static websites using Gatsby - such as this one.
+            static websites using Gatsby - such as this one. You might notice
+            that I'm not necessarily a design professional - you can still rely
+            on my experience in implementing given design templates.
           </AboutText>
         </FlexChildren>
       </Container>
