@@ -9,7 +9,7 @@ import Projects from '../components/Projects';
 const IndexPage = () => {
   return (
     <Layout>
-      <SEO title="Home" />
+      <SEO title="Joo Han Kim" />
       <Header />
       <About />
       <MyLife />

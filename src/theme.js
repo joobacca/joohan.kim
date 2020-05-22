@@ -5,7 +5,7 @@ const theme = {
     section: {
       about: '#087CA7',
       mylife: '#ee3d3d',
-      portfolio: '#5bfb87',
+      projects: '#5bfb87',
     }
   },
   spacing: factor => factor * 8,

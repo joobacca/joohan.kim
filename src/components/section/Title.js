@@ -24,6 +24,7 @@ const BottomBorder = styled(a.div)`
   position: absolute;
   bottom: 0;
   left: 0;
+  z-index: -1;
   border-bottom: 3px solid ${({ color }) => color};
 `;
 

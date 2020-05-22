@@ -10,6 +10,6 @@ export const device = {
   mobile: `max-width: ${sizes.xsmall}px` ,
   tabletS: `max-width: ${sizes.small}px`,
   tablet: `max-width: ${sizes.medium}px`,
-  latpop: `max-width: ${sizes.large}px`,
+  laptop: `max-width: ${sizes.large}px`,
   desktop: `max-width: ${sizes.xlarge}px`,
 };

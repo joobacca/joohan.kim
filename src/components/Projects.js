@@ -9,6 +9,7 @@ import styled from 'styled-components';
 import { device } from '../utils/breakpoints';
 import theme from '../theme';
 import Button from './Button';
+import Project from './Project';
 import useScrollToElement from '../hooks/useScrollToElement';
 
 const Container = styled.div`
@@ -40,6 +41,35 @@ const AboutText = styled.p`
   color: #333;
 `;
 
+const ProjectList = styled.div`
+  display: flex;
+  & > div {
+    margin-left: 20px;
+    @media screen and (${device.mobile}) {
+      width: 100%;
+      margin-left: 0;
+    }
+    @media screen and (${device.laptop}) {
+      width: 50%;
+    }
+    width: 33%;
+
+  }
+`;
+
+const projectList = [
+  {
+    title: 'von-der-see.de',
+    description: '',
+    url: 'https://von-der-see.de',
+  },
+  {
+    title: 'KEPTN.info',
+    description: '',
+    url: 'https://von-der-see.de',
+  },
+];
+
 const About = () => {
   const data = useStaticQuery(graphql`
     {
@@ -53,41 +83,16 @@ const About = () => {
     }
   `);
 
-  const { about, mylife } = theme.palette.section;
+  const { projects } = theme.palette.section;
 
-  const scrollTo = useScrollToElement();
   return (
     <SectionContainer id="projects">
-      {/* <ScrollAnimation showOnce>
-        
-      </ScrollAnimation> */}
-      <Title color={about}>About myself</Title>
-      <Container>
-        <FlexChildren>
-          <ScrollAnimation showOnce>
-            <Image fluid={data.file.childImageSharp.fluid} />
-          </ScrollAnimation>
-        </FlexChildren>
-        <FlexChildren>
-          <AboutText>
-            I am a web developer based in Emden, Germany. I have been developing
-            websites and applications since 2014 - when I started studying. I am
-            looking forward to learn new technologies in front and backend
-            development.
-          </AboutText>
-          <AboutText>
-            My main skills consist of WordPress theme development and building
-            static websites using Gatsby - such as this one.
-          </AboutText>
-        </FlexChildren>
-      </Container>
-      <Button
-        color={mylife}
-        borderColor={mylife}
-        onClick={() => scrollTo('mylife')}
-      >
-        About
-      </Button>
+      <Title color={projects}>Projects</Title>
+      <ProjectList>
+        {projectList.map(el => {
+          return <Project data={el} key={el.title} />;
+        })}
+      </ProjectList>
     </SectionContainer>
   );
 };
