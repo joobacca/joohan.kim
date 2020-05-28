@@ -69,7 +69,7 @@ const About = () => {
           <AboutText>
             I am a web developer based in Emden, Germany. I have been developing
             websites and applications since 2014 - when I started studying. I am
-            looking forward to learn new technologies in front and backend
+            looking forward to learning new technologies in front- and backend
             development.
           </AboutText>
           <AboutText>

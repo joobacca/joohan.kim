@@ -1,14 +1,40 @@
 import React from 'react';
 import styled from 'styled-components';
+import { animated, useSpring } from 'react-spring';
+import { useHover } from 'react-use-gesture';
 
-const Wrapper = styled.div`
+const ProjectTitle = styled.a`
+  font-size: 1.3rem;
+  color: black;
+  text-decoration: none;
+`;
+
+const Wrapper = styled(animated.div)`
+  box-sizing: border-box;
   padding: 15px;
-  box-shadow: 10px 10px 10px #0e0e0e;
 `;
 
 const Project = ({ data, ...props }) => {
+  const [hover, setHover] = React.useState(false);
+  const spring = useSpring({
+    boxShadow: hover
+      ? '10px 10px 10px rgba(14, 14, 14, 0.6)'
+      : '0px 0px 10px rgba(14, 14, 14, 0)',
+  });
+  const bind = useHover(({ hovering }) => setHover(hovering));
   const { title, description, url } = data;
-  return <Wrapper {...props}>{title}</Wrapper>;
+  return (
+    <Wrapper hovered={hover} {...bind()} {...props} style={spring}>
+      <ProjectTitle href={url} rel="noopener nofollower" target="_blank">{title}</ProjectTitle>
+      <hr />
+      <p>{description}</p>
+      <div style={{ textAlign: 'right' }}>
+        <a href={url} rel="noopener nofollower" target="_blank" style={{ textDecoration: 'none'}}>
+          Visit ->
+        </a>
+      </div>
+    </Wrapper>
+  );
 };
 
 export default Project;

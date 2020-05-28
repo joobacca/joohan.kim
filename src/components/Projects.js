@@ -12,61 +12,33 @@ import Button from './Button';
 import Project from './Project';
 import useScrollToElement from '../hooks/useScrollToElement';
 
-const Container = styled.div`
-  padding: 30px 0;
-  @media screen and (${device.tabletS}) {
-    display: block;
-  }
-  display: flex;
-`;
-
-const FlexChildren = styled.div`
-  width: 50%;
-  box-sizing: border-box;
-  padding: 10px;
-  @media screen and (${device.tabletS}) {
-    width: 100%;
-  }
-`;
-
-const Image = styled(Img)`
-  width: 60%;
-  @media screen and (${device.tabletS}) {
-    width: 60%;
-    margin: auto;
-  }
-`;
-
-const AboutText = styled.p`
-  color: #333;
-`;
-
 const ProjectList = styled.div`
   display: flex;
+  padding: 20px 0;
   & > div {
-    margin-left: 20px;
-    @media screen and (${device.mobile}) {
-      width: 100%;
-      margin-left: 0;
-    }
+    width: 33%;
     @media screen and (${device.laptop}) {
       width: 50%;
     }
-    width: 33%;
-
+    @media screen and (${device.mobile}) {
+      margin: 0 0 10px 0;
+      width: 100%;
+      margin-left: 0;
+    }
   }
 `;
 
 const projectList = [
   {
     title: 'von-der-see.de',
-    description: '',
+    description: `The agency website created with a headless CMS (WordPress) as backend and Gatsby as frontend. 
+    A lot of animations and shenanigans were used to show the creative side of the company and its employees.`,
     url: 'https://von-der-see.de',
   },
   {
     title: 'KEPTN.info',
-    description: '',
-    url: 'https://von-der-see.de',
+    description: `Informative website about the smartcity app KEPTN. Used for initial guiding and providing informations, the KEPTN.info was once created using an HTML template, but soon ported using Gatsby and WordPress to allow dynamic content.`,
+    url: 'https://keptn.info',
   },
 ];
 
