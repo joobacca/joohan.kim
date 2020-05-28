@@ -11,8 +11,8 @@ const MenuContainer = styled.div`
   position: sticky;
   top: 0;
   z-index: 50;
+  height: 0;
   right: 0;
-  padding: 20px;
   @media (${device.mobile}) {
     display: none;
   }
@@ -22,8 +22,11 @@ const NavList = styled.ul`
   text-align: right;
   padding-left: 0;
   list-style: none;
+  padding: 0 20px;
+  background-color: #fffa;
   & > li {
-    display: inline;
+    padding: 20px 10px;
+    display: inline-block;
   }
 `;
 
@@ -50,13 +53,15 @@ const NavAnchor = ({ children, target, isVisible, ...props }) => {
   const scrollTo = useScrollToElement();
 
   return (
-    <Anchor onClick={() => scrollTo(target)} {...props}>
-      {children}
-      {transitions.map(
-        ({ item, key, props }) =>
-          item && <BottomBorder section={target} style={props} />,
-      )}
-    </Anchor>
+    <li>
+      <Anchor onClick={() => scrollTo(target)} {...props}>
+        {children}
+        {transitions.map(
+          ({ item, key, props }) =>
+            item && <BottomBorder section={target} style={props} />,
+        )}
+      </Anchor>
+    </li>
   );
 };
 
