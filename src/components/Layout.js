@@ -7,7 +7,7 @@
 
 import React from 'react';
 import PropTypes from 'prop-types';
-import { ThemeProvider, createGlobalStyle } from 'styled-components';
+import styled, { ThemeProvider, createGlobalStyle } from 'styled-components';
 import theme from '../theme';
 import Menu from './Menu';
 
@@ -22,14 +22,19 @@ const GlobalStyle = createGlobalStyle`
   }
 `;
 
+const StyledMain = styled.main`
+  max-width: 1920px;
+  margin: 0 auto;
+`;
+
 const Layout = ({ children, mode }) => {
   return (
     <ThemeProvider theme={theme}>
       <GlobalStyle />
-      <main>
+      <StyledMain>
         <Menu />
         {children}
-      </main>
+      </StyledMain>
     </ThemeProvider>
   );
 };

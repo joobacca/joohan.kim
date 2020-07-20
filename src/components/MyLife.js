@@ -49,7 +49,7 @@ const MyLife = () => {
         <Life>
           {trail.map(({ height }, index) => (
             <YearContainer style={{ height }}>
-              <div style={{ padding: '20px' }}>{data[index].year}</div>
+              <div style={{ padding: '20px 10px' }}>{data[index].year}</div>
               <div style={{ padding: '20px' }}>{data[index].happening}</div>
             </YearContainer>
           ))}

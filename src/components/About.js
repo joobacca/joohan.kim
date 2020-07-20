@@ -40,6 +40,13 @@ const AboutText = styled.p`
   color: #333;
 `;
 
+const Skills = styled.div`
+  margin: 20px 0;
+`;
+const Logo = styled(Img)`
+  margin: 0 10px 0 0;
+`;
+
 const About = () => {
   const data = useStaticQuery(graphql`
     {
@@ -50,11 +57,21 @@ const About = () => {
           }
         }
       }
+      allFile(filter: { relativePath: { regex: "/images/logos/(.)*.png/" } }) {
+        nodes {
+          childImageSharp {
+            fixed(height: 50) {
+              ...GatsbyImageSharpFixed_tracedSVG
+            }
+          }
+          name
+        }
+      }
     }
   `);
 
   const { about, mylife } = theme.palette.section;
-
+  const { allFile } = data;
   const scrollTo = useScrollToElement();
   return (
     <SectionContainer id="about">
@@ -78,6 +95,17 @@ const About = () => {
             that I'm not necessarily a design professional - you can still rely
             on my experience in implementing given design templates.
           </AboutText>
+
+          <div>My skills</div>
+          <Skills>
+            {allFile.nodes.map((image, i) => (
+              <Logo
+                key={image.name + i}
+                fixed={image.childImageSharp.fixed}
+                alt={`${image.name} logo`}
+              />
+            ))}
+          </Skills>
         </FlexChildren>
       </Container>
       <Button

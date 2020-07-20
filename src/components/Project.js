@@ -19,7 +19,7 @@ const Project = ({ data, ...props }) => {
   const spring = useSpring({
     boxShadow: hover
       ? '10px 10px 10px rgba(14, 14, 14, 0.6)'
-      : '0px 0px 10px rgba(14, 14, 14, 0)',
+      : '5px 5px 10px rgba(14, 14, 14, 0.2)',
   });
   const bind = useHover(({ hovering }) => setHover(hovering));
   const { title, description, url } = data;

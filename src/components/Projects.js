@@ -13,18 +13,15 @@ import Project from './Project';
 import useScrollToElement from '../hooks/useScrollToElement';
 
 const ProjectList = styled.div`
-  display: flex;
+  display: grid;
   padding: 20px 0;
-  & > div {
-    width: 33%;
-    @media screen and (${device.laptop}) {
-      width: 50%;
-    }
-    @media screen and (${device.mobile}) {
-      margin: 0 0 10px 0;
-      width: 100%;
-      margin-left: 0;
-    }
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 20px;
+  @media screen and (${device.laptop}) {
+    grid-template-columns: 1fr 1fr;
+  }
+  @media screen and (${device.mobile}) {
+    grid-template-columns: 1fr;
   }
 `;
 

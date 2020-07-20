@@ -1,0 +1,261 @@
+webpackHotUpdate("commons",{
+
+/***/ "./src/pages/think.js":
+/*!****************************!*\
+  !*** ./src/pages/think.js ***!
+  \****************************/
+/*! exports provided: query, default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* WEBPACK VAR INJECTION */(function(module) {/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "query", function() { return query; });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _components_Layout__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/Layout */ "./src/components/Layout/index.js");
+/* harmony import */ var _components_SEO__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../components/SEO */ "./src/components/SEO.js");
+/* harmony import */ var _components_ThinkPageHeader__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../components/ThinkPageHeader */ "./src/components/ThinkPageHeader/index.js");
+/* harmony import */ var _themes__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../themes */ "./src/themes/index.js");
+/* harmony import */ var _components_ThinkSectionThinking__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../components/ThinkSectionThinking */ "./src/components/ThinkSectionThinking/index.js");
+/* harmony import */ var _components_ThinkSocialMedia__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../components/ThinkSocialMedia */ "./src/components/ThinkSocialMedia/index.js");
+/* harmony import */ var _components_ThinkSectionCreation__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../components/ThinkSectionCreation */ "./src/components/ThinkSectionCreation/index.js");
+/* harmony import */ var _components_ThinkSectionContent__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../components/ThinkSectionContent */ "./src/components/ThinkSectionContent/index.js");
+/* harmony import */ var _components_ContactSection__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../components/ContactSection */ "./src/components/ContactSection/index.js");
+/* harmony import */ var _hooks_useNormalizedContact__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../hooks/useNormalizedContact */ "./src/hooks/useNormalizedContact.js");
+/* harmony import */ var _utils_propTypes__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ../utils/propTypes */ "./src/utils/propTypes.js");
+/* harmony import */ var _components_ThinkScrollToTop__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ../components/ThinkScrollToTop */ "./src/components/ThinkScrollToTop/index.js");
+/* harmony import */ var _components_PostsSlideset__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ../components/PostsSlideset */ "./src/components/PostsSlideset/index.js");
+/* harmony import */ var _utils_functions__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ../utils/functions */ "./src/utils/functions.js");
+/* harmony import */ var _components_ThinkSectionWrapper__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ../components/ThinkSectionWrapper */ "./src/components/ThinkSectionWrapper/index.js");
+/* harmony import */ var _hooks_useAllBlogPosts__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ../hooks/useAllBlogPosts */ "./src/hooks/useAllBlogPosts.js");
+var _this = undefined,
+    _jsxFileName = "C:\\Users\\vds6-2\\Documents\\Projects\\von-der-see-website\\src\\pages\\think.js";
+
+(function () {
+  var enterModule = typeof reactHotLoaderGlobal !== 'undefined' ? reactHotLoaderGlobal.enterModule : undefined;
+  enterModule && enterModule(module);
+})();
+
+var __signature__ = typeof reactHotLoaderGlobal !== 'undefined' ? reactHotLoaderGlobal.default.signature : function (a) {
+  return a;
+};
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+var Think = function Think(_ref) {
+  var data = _ref.data;
+  var _data$wordpressPage$a = data.wordpressPage.acf,
+      header = _data$wordpressPage$a.header,
+      thinking = _data$wordpressPage$a.thinking,
+      creation = _data$wordpressPage$a.creation,
+      contentRepeater = _data$wordpressPage$a.content_features_repeater,
+      socialMedia = _data$wordpressPage$a.social_media,
+      contactPerson1 = _data$wordpressPage$a.contact_person_1,
+      contact1Tags = _data$wordpressPage$a.contact_person_1_tags,
+      contactPerson2 = _data$wordpressPage$a.contact_person_2,
+      contact2Tags = _data$wordpressPage$a.contact_person_2_tags,
+      posts = _data$wordpressPage$a.blog_references_slider;
+  var contactLeft = Object(_hooks_useNormalizedContact__WEBPACK_IMPORTED_MODULE_11__["default"])(contactPerson1);
+  var contactRight = Object(_hooks_useNormalizedContact__WEBPACK_IMPORTED_MODULE_11__["default"])(contactPerson2);
+  var allPosts = Object(_hooks_useAllBlogPosts__WEBPACK_IMPORTED_MODULE_17__["default"])(posts);
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_Layout__WEBPACK_IMPORTED_MODULE_2__["default"], {
+    theme: _themes__WEBPACK_IMPORTED_MODULE_5__["think"],
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 45,
+      columnNumber: 5
+    }
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_SEO__WEBPACK_IMPORTED_MODULE_3__["default"], {
+    title: header.header_title,
+    yoast: data.wordpressPage.yoast_meta,
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 46,
+      columnNumber: 7
+    }
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_ThinkPageHeader__WEBPACK_IMPORTED_MODULE_4__["default"], {
+    title: header.header_title,
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 47,
+      columnNumber: 7
+    }
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_ThinkSectionThinking__WEBPACK_IMPORTED_MODULE_6__["default"], {
+    content: thinking,
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 48,
+      columnNumber: 7
+    }
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_ThinkSocialMedia__WEBPACK_IMPORTED_MODULE_7__["default"], {
+    links: socialMedia,
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 49,
+      columnNumber: 7
+    }
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_ThinkSectionCreation__WEBPACK_IMPORTED_MODULE_8__["default"], {
+    content: creation,
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 50,
+      columnNumber: 7
+    }
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_ThinkSectionContent__WEBPACK_IMPORTED_MODULE_9__["default"], {
+    content: contentRepeater,
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 51,
+      columnNumber: 7
+    }
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_ContactSection__WEBPACK_IMPORTED_MODULE_10__["default"], {
+    contactLeft: contactLeft,
+    contactLeftTags: contact1Tags,
+    contactRight: contactRight,
+    contactRightTags: contact2Tags,
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 52,
+      columnNumber: 7
+    }
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_PostsSlideset__WEBPACK_IMPORTED_MODULE_14__["default"], {
+    posts: Object(_utils_functions__WEBPACK_IMPORTED_MODULE_15__["transformPosts"])(allPosts),
+    renderWrapper: _components_ThinkSectionWrapper__WEBPACK_IMPORTED_MODULE_16__["default"],
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 58,
+      columnNumber: 7
+    }
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_ThinkScrollToTop__WEBPACK_IMPORTED_MODULE_13__["default"], {
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 62,
+      columnNumber: 7
+    }
+  }));
+};
+
+__signature__(Think, "useNormalizedContact{contactLeft}\nuseNormalizedContact{contactRight}\nuseAllBlogPosts{allPosts}", function () {
+  return [_hooks_useNormalizedContact__WEBPACK_IMPORTED_MODULE_11__["default"], _hooks_useNormalizedContact__WEBPACK_IMPORTED_MODULE_11__["default"], _hooks_useAllBlogPosts__WEBPACK_IMPORTED_MODULE_17__["default"]];
+});
+
+var query = "2933711544";
+Think.propTypes = {
+  data: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.shape({
+    wordpressPage: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.shape({
+      wordpress_id: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.number,
+      yoast_meta: _utils_propTypes__WEBPACK_IMPORTED_MODULE_12__["yoastPropType"],
+      acf: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.shape({
+        header: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.shape({
+          header_title: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.string
+        }),
+        thinking: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.shape({
+          thinking_title: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.string,
+          thinking_text: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.string,
+          thinking_image: _utils_propTypes__WEBPACK_IMPORTED_MODULE_12__["fluidImagePropType"],
+          cta_label: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.string,
+          link_internal: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.shape({
+            post_type: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.string,
+            post_name: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.string,
+            post_title: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.string
+          }),
+          link_external: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.string
+        }),
+        creation: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.shape({
+          creation_text: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.string,
+          creation_title: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.string,
+          creation_contact: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.arrayOf(prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.shape({
+            contactPropType: _utils_propTypes__WEBPACK_IMPORTED_MODULE_12__["contactPropType"]
+          })),
+          creation_image: _utils_propTypes__WEBPACK_IMPORTED_MODULE_12__["fluidImagePropType"],
+          cta_label: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.string,
+          link_internal: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.shape({
+            post_type: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.string,
+            post_name: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.string,
+            post_title: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.string
+          }),
+          link_external: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.string
+        }),
+        content_features_repeater: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.arrayOf(prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.shape({
+          content_feature_label: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.string
+        })),
+        social_media: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.shape({
+          facebook_title: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.string,
+          facebook_url: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.string,
+          instagram_title: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.string,
+          instagram_url: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.string,
+          pinterest_title: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.string,
+          pinterest_url: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.string,
+          twitter_title: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.string,
+          twitter_url: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.string
+        }),
+        contact_person_1: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.arrayOf(prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.shape({
+          contactPropType: _utils_propTypes__WEBPACK_IMPORTED_MODULE_12__["contactPropType"]
+        })),
+        contact_person_1_tags: _utils_propTypes__WEBPACK_IMPORTED_MODULE_12__["contactTagPropType"],
+        contact_person_2: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.arrayOf(prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.shape({
+          contactPropType: _utils_propTypes__WEBPACK_IMPORTED_MODULE_12__["contactPropType"]
+        })),
+        contact_person_2_tags: _utils_propTypes__WEBPACK_IMPORTED_MODULE_12__["contactTagPropType"],
+        blog_references_slider: _utils_propTypes__WEBPACK_IMPORTED_MODULE_12__["blogReferenceSlidePropType"]
+      })
+    })
+  }).isRequired
+};
+var _default = Think;
+/* harmony default export */ __webpack_exports__["default"] = (_default);
+;
+
+(function () {
+  var reactHotLoader = typeof reactHotLoaderGlobal !== 'undefined' ? reactHotLoaderGlobal.default : undefined;
+
+  if (!reactHotLoader) {
+    return;
+  }
+
+  reactHotLoader.register(Think, "Think", "C:\\Users\\vds6-2\\Documents\\Projects\\von-der-see-website\\src\\pages\\think.js");
+  reactHotLoader.register(query, "query", "C:\\Users\\vds6-2\\Documents\\Projects\\von-der-see-website\\src\\pages\\think.js");
+  reactHotLoader.register(_default, "default", "C:\\Users\\vds6-2\\Documents\\Projects\\von-der-see-website\\src\\pages\\think.js");
+})();
+
+;
+
+(function () {
+  var leaveModule = typeof reactHotLoaderGlobal !== 'undefined' ? reactHotLoaderGlobal.leaveModule : undefined;
+  leaveModule && leaveModule(module);
+})();
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../../node_modules/webpack/buildin/harmony-module.js */ "./node_modules/webpack/buildin/harmony-module.js")(module)))
+
+/***/ })
+
+})
+//# sourceMappingURL=commons.72e417ac45dc722ff74d.hot-update.js.map
