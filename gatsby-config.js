@@ -7,6 +7,12 @@ module.exports = {
   plugins: [
     `gatsby-plugin-react-helmet`,
     {
+      resolve: `gatsby-plugin-htaccess`,
+      options: {
+        https: true,
+      }
+    },
+    {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `files`,
@@ -24,6 +30,12 @@ module.exports = {
         background_color: `#663399`,
         theme_color: `#663399`,
         display: `minimal-ui`,
+      },
+    },
+    {
+      resolve: `gatsby-plugin-offline`,
+      options: {
+        precachePages: [`*`],
       },
     },
     {
