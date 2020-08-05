@@ -1,5 +1,4 @@
 import React from 'react';
-import { useSpring } from 'react-spring';
 import { useStaticQuery, graphql } from 'gatsby';
 import Img from 'gatsby-image';
 import SectionContainer from './section/Container';

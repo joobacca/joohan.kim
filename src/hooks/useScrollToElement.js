@@ -4,7 +4,7 @@ import { windowObject, documentObject } from '../utils/ssrObjects';
 
 function useScrollToElement() {
   const [scrolling, setScrolling] = React.useState(false);
-  const [props, setY, stop] = useSpring(() => ({
+  const [, setY] = useSpring(() => ({
     y: 0,
   }));
 

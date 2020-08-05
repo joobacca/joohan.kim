@@ -91,20 +91,14 @@ const ListItem = ({ target, children }) => {
   );
 };
 
-const Menu = () => {
-  // const [scroll, setScroll] = React.useState();
-
-  const scrollTo = useScrollToElement();
-
-  return (
-    <MenuContainer>
-      <NavList>
-        <ListItem target="about">About</ListItem>
-        <ListItem target="mylife">Curriculum</ListItem>
-        <ListItem target="projects">Projects</ListItem>
-      </NavList>
-    </MenuContainer>
-  );
-};
+const Menu = () => (
+  <MenuContainer>
+    <NavList>
+      <ListItem target="about">About</ListItem>
+      <ListItem target="mylife">Curriculum</ListItem>
+      <ListItem target="projects">Projects</ListItem>
+    </NavList>
+  </MenuContainer>
+);
 
 export default Menu;

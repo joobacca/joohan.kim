@@ -1,16 +1,16 @@
 import React from 'react';
-import { useSpring } from 'react-spring';
-import { useStaticQuery, graphql } from 'gatsby';
-import Img from 'gatsby-image';
+// import { useSpring } from 'react-spring';
+// import { useStaticQuery, graphql } from 'gatsby';
+// import Img from 'gatsby-image';
 import SectionContainer from './section/Container';
-import ScrollAnimation from './ScrollAnimation';
+// import ScrollAnimation from './ScrollAnimation';
 import Title from './section/Title';
 import styled from 'styled-components';
 import { device } from '../utils/breakpoints';
 import theme from '../theme';
-import Button from './Button';
+// import Button from './Button';
 import Project from './Project';
-import useScrollToElement from '../hooks/useScrollToElement';
+// import useScrollToElement from '../hooks/useScrollToElement';
 
 const ProjectList = styled.div`
   display: grid;
@@ -40,17 +40,17 @@ const projectList = [
 ];
 
 const About = () => {
-  const data = useStaticQuery(graphql`
-    {
-      file(relativePath: { eq: "images/joo.jpeg" }) {
-        childImageSharp {
-          fluid(maxWidth: 500) {
-            ...GatsbyImageSharpFluid_withWebp_tracedSVG
-          }
-        }
-      }
-    }
-  `);
+  // const data = useStaticQuery(graphql`
+  //   {
+  //     file(relativePath: { eq: "images/joo.jpeg" }) {
+  //       childImageSharp {
+  //         fluid(maxWidth: 500) {
+  //           ...GatsbyImageSharpFluid_withWebp_tracedSVG
+  //         }
+  //       }
+  //     }
+  //   }
+  // `);
 
   const { projects } = theme.palette.section;
 
