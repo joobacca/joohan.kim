@@ -39,7 +39,7 @@ jobs:
         HOST: ${{ secrets.HOST }}
         USERNAME: ${{ secrets.USERNAME }}
         KEY: ${{ secrets.SSHKEY }}
-      with:
+        PORT: 22
         source: "build.tar.gz"
         target: "/var/www/joohan.kim"
 
