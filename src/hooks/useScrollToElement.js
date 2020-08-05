@@ -39,7 +39,7 @@ function useScrollToElement() {
   React.useEffect(() => {
     documentObject.addEventListener('wheel', onWheelHandler);
     return () => documentObject.removeEventListener('wheel', onWheelHandler);
-  });
+  }, []);
 
   return onClickHandler;
 }
