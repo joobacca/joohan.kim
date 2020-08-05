@@ -1,9 +1,9 @@
 {
-  "name": "gatsby-starter-default",
+  "name": "joohan.kim",
   "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
+  "description": "Portfolio website of Joo Han Kim, a web developer based in Emden, Germany.",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Joobacca <joohankim@gmx.de>",
   "dependencies": {
     "babel-plugin-styled-components": "^1.10.7",
     "gatsby": "^2.21.11",
@@ -30,7 +30,7 @@
     "prettier": "2.0.4"
   },
   "keywords": [
-    "gatsby"
+    "gatsby", "react", "react-spring"
   ],
   "license": "MIT",
   "scripts": {
@@ -41,12 +41,5 @@
     "serve": "gatsby serve",
     "clean": "gatsby clean",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
-  },
-  "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
   }
 }
