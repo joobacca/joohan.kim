@@ -16,7 +16,7 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [10.x, 12.x, 14.x]
+        node-version: [12.x]
 
     steps:
     - uses: actions/checkout@v2
@@ -24,9 +24,15 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: ${{ matrix.node-version }}
-    - run: npm ci
-    - run: npm run build
-    - run: tar -czf build.tar.gz build/
+    - name: Installing dependencies
+      run: npm ci
+
+    - name: Building the project
+      run: npm run build
+
+    - name: Tar the shit out of the build folder, man.
+      run: tar -czf build.tar.gz public/
+
     - name: Copy file via scp
       uses: appleboy/scp-action@master
       env:
@@ -37,10 +43,10 @@ jobs:
         source: "build.tar.gz"
         target: "/var/www/joohan.kim"
 
-    - name: Executing remote  command
+    - name: The magic is happening here
       uses: appleboy/ssh-action@master
       with:
         host: ${{ secrets.HOST }}
         USERNAME: ${{ secrets.USERNAME }}
         KEY: ${{ secrets.SSHKEY }}
-        script: rm -rf html && tar -xzf build.tar.gz && mv build html
+        script: rm -rf html && tar -xzf build.tar.gz . && mv public html
