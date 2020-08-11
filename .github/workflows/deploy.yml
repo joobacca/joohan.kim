@@ -61,4 +61,4 @@ jobs:
         HOST: ${{ secrets.HOST }}
         USERNAME: ${{ secrets.USERNAME }}
         PASSWORD: ${{ secrets.PASSWORD }}
-        script: source /var/www/joohan.kim/deploy.sh
+        script: cd /var/www/joohan.kim && source deploy.sh
