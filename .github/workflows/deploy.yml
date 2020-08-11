@@ -49,6 +49,7 @@ jobs:
         USERNAME: ${{ secrets.USERNAME }}
         PASSWORD: ${{ secrets.PASSWORD }}
         PORT: 22
+      with:
         source: "build.tar.gz"
         target: "/var/www/joohan.kim/build.tar.gz"
         # KEY: ${{ secrets.SSHKEY }}
@@ -57,7 +58,7 @@ jobs:
     - name: The magic is happening here
       uses: appleboy/ssh-action@master
       with:
-        host: ${{ secrets.HOST }}
+        HOST: ${{ secrets.HOST }}
         USERNAME: ${{ secrets.USERNAME }}
-        KEY: ${{ secrets.SSHKEY }}
+        PASSWORD: ${{ secrets.PASSWORD }}
         script: rm -rf html && tar -xzf build.tar.gz . && mv public html
