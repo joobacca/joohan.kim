@@ -61,4 +61,4 @@ jobs:
         HOST: ${{ secrets.HOST }}
         USERNAME: ${{ secrets.USERNAME }}
         PASSWORD: ${{ secrets.PASSWORD }}
-        script: cd /var/www/joohan.kim && tar -xzf build.tar.gz . && rm -rf html && mv public html
+        script: cd /var/www/joohan.kim && source deploy.sh
