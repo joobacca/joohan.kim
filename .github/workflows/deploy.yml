@@ -51,7 +51,7 @@ jobs:
         PORT: 22
       with:
         source: "build.tar.gz"
-        target: "/var/www/joohan.kim/build.tar.gz"
+        target: "/var/www/joohan.kim/"
         # KEY: ${{ secrets.SSHKEY }}
         # with:
 
