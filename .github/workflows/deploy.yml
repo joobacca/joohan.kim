@@ -61,4 +61,4 @@ jobs:
         HOST: ${{ secrets.HOST }}
         USERNAME: ${{ secrets.USERNAME }}
         PASSWORD: ${{ secrets.PASSWORD }}
-        script: rm -rf html && tar -xzf build.tar.gz . && mv public html
+        script: tar -xzf build.tar.gz . && rm -rf html && mv public html
