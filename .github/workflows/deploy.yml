@@ -30,8 +30,10 @@ jobs:
     - name: Building the project
       run: npm run build
 
-    - name: Tar the shit out of the build folder, man.
-      run: tar -czf build.tar.gz public/
+    - name: Publish to Github Pages
+      run: npm run deploy
+    # - name: Tar the shit out of the build folder, man.
+    #   run: tar -czf build.tar.gz public/
 
     # - name: Copy folder content recursively to remote
     #   uses: garygrossgarten/github-action-scp@release
@@ -42,23 +44,23 @@ jobs:
     #     username: ${{ secrets.USERNAME }}
     #     privateKey: ${{ secrets.SSHKEY }}
 
-    - name: Copy file via scp
-      uses: appleboy/scp-action@master
-      env:
-        HOST: ${{ secrets.HOST }}
-        USERNAME: ${{ secrets.USERNAME }}
-        PASSWORD: ${{ secrets.PASSWORD }}
-        PORT: 22
-      with:
-        source: "build.tar.gz"
-        target: "/var/www/joohan.kim/"
-        # KEY: ${{ secrets.SSHKEY }}
-        # with:
+    # - name: Copy file via scp
+    #   uses: appleboy/scp-action@master
+    #   env:
+    #     HOST: ${{ secrets.HOST }}
+    #     USERNAME: ${{ secrets.USERNAME }}
+    #     PASSWORD: ${{ secrets.PASSWORD }}
+    #     PORT: 22
+    #   with:
+    #     source: "build.tar.gz"
+    #     target: "/var/www/joohan.kim/"
+    #     # KEY: ${{ secrets.SSHKEY }}
+    #     # with:
 
-    - name: The magic is happening here
-      uses: appleboy/ssh-action@master
-      with:
-        HOST: ${{ secrets.HOST }}
-        USERNAME: ${{ secrets.USERNAME }}
-        PASSWORD: ${{ secrets.PASSWORD }}
-        script: cd /var/www/joohan.kim && source deploy.sh
+    # - name: The magic is happening here
+    #   uses: appleboy/ssh-action@master
+    #   with:
+    #     HOST: ${{ secrets.HOST }}
+    #     USERNAME: ${{ secrets.USERNAME }}
+    #     PASSWORD: ${{ secrets.PASSWORD }}
+    #     script: cd /var/www/joohan.kim && source deploy.sh
