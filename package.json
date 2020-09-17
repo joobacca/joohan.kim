@@ -13,7 +13,7 @@
     "gatsby-plugin-offline": "^3.2.0",
     "gatsby-plugin-prefetch-google-fonts": "^1.4.3",
     "gatsby-plugin-react-helmet": "^3.3.0",
-    "gatsby-plugin-sharp": "^2.6.0",
+    "gatsby-plugin-sharp": "^2.6.36",
     "gatsby-plugin-styled-components": "^3.3.0",
     "gatsby-source-filesystem": "^2.3.0",
     "gatsby-transformer-sharp": "^2.5.0",
@@ -28,7 +28,14 @@
     "styled-components": "^5.1.0"
   },
   "devDependencies": {
-    "prettier": "2.0.4"
+    "eslint": "^7.2.0",
+    "eslint-config-airbnb": "^18.2.0",
+    "eslint-config-google": "^0.14.0",
+    "eslint-plugin-import": "^2.21.2",
+    "eslint-plugin-jsx-a11y": "^6.3.0",
+    "eslint-plugin-react": "^7.20.0",
+    "eslint-plugin-react-hooks": "^4.0.0",
+    "prettier": "^2.0.4"
   },
   "keywords": [
     "gatsby",

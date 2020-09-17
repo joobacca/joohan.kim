@@ -25,11 +25,18 @@ const Project = ({ data, ...props }) => {
   const { title, description, url } = data;
   return (
     <Wrapper hovered={hover} {...bind()} {...props} style={spring}>
-      <ProjectTitle href={url} rel="noopener noreferrer" target="_blank">{title}</ProjectTitle>
+      <ProjectTitle href={url} rel="noopener noreferrer" target="_blank">
+        {title}
+      </ProjectTitle>
       <hr />
       <p>{description}</p>
       <div style={{ textAlign: 'right' }}>
-        <a href={url} rel="noopener noreferrer" target="_blank" style={{ textDecoration: 'none'}}>
+        <a
+          href={url}
+          rel="noopener noreferrer"
+          target="_blank"
+          style={{ textDecoration: 'none' }}
+        >
           Visit -&gt;
         </a>
       </div>
