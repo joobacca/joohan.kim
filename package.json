@@ -6,6 +6,7 @@
   "author": "Joobacca <joohankim@gmx.de>",
   "dependencies": {
     "babel-plugin-styled-components": "^1.10.7",
+    "dayjs": "^1.8.36",
     "gatsby": "^2.21.11",
     "gatsby-image": "^2.4.0",
     "gatsby-plugin-htaccess": "^1.4.0",

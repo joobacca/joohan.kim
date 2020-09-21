@@ -5,6 +5,7 @@ import Header from '../components/Header';
 import About from '../components/About';
 import MyLife from '../components/MyLife';
 import Projects from '../components/Projects';
+import ColorClock from '../components/ColorClock';
 
 const IndexPage = () => {
   return (
@@ -14,6 +15,7 @@ const IndexPage = () => {
       <About />
       <MyLife />
       <Projects />
+      <ColorClock />
     </Layout>
   );
 };

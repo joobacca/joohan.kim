@@ -40,18 +40,6 @@ const projectList = [
 ];
 
 const About = () => {
-  // const data = useStaticQuery(graphql`
-  //   {
-  //     file(relativePath: { eq: "images/joo.jpeg" }) {
-  //       childImageSharp {
-  //         fluid(maxWidth: 500) {
-  //           ...GatsbyImageSharpFluid_withWebp_tracedSVG
-  //         }
-  //       }
-  //     }
-  //   }
-  // `);
-
   const { projects } = theme.palette.section;
 
   return (
