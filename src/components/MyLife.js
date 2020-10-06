@@ -7,30 +7,54 @@ import VisibilitySensor from 'react-visibility-sensor';
 import Button from './Button';
 import styled from 'styled-components';
 import useScrollToElement from '../hooks/useScrollToElement';
+import { device } from '../utils/breakpoints';
 
-const YearContainer = styled(animated.div)`
+const Step = styled(animated.div)`
   display: flex;
+  @media screen and (${device.tabletS}) {
+    display: block;
+  }
 `;
+
+const Year = styled.div`
+  padding: 20px 10px;
+  min-width: 100px;
+  @media screen and (${device.tabletS}) {
+    padding: 20px 10px 0 0 !important;
+  }
+`;
+const StepDesc = styled.div`
+  padding: 20px 10px;
+  min-width: 100px;
+  @media screen and (${device.tabletS}) {
+    padding: 20px 10px 20px 0 !important;
+  }
+`;
+
 
 const data = [
   {
-    year: 2014,
+    year: '2013 - 2014',
     happening:
-      'Finished high school in Leer, Ostfriesland and decided to move to Emden to start studying.',
+      'Finished high school in Leer, Ostfriesland and decided to move to Emden to start studying',
   },
   {
-    year: 2017,
-    happening:
-      'After 5 semesters and lots of self deterioration I realized that I should quit studying and take care of myself and my health. After a break of half a year, I went to a second take to an apprenticeship.',
+    year: '2014 - 2017',
+    happening: 'Computer Science (B.Sc.), 5 semesters',
   },
   {
-    year: 2020,
-    happening: `Soon I'll be done and be certificated to work as a software developer.`,
+    year: '2017 - 2020',
+    happening: `Apprenticeship (Ausbildung) to a certified software developer`,
+  },
+  {
+    year: '2020 -',
+    happening:
+      'Currently employed as a web developer at Digitalagentur VON DER SEE GmbH, Emden',
   },
 ];
 
 const Life = styled.div`
-  padding: 20px;
+  padding: 10px;
 `;
 
 const MyLife = () => {
@@ -48,10 +72,10 @@ const MyLife = () => {
 
         <Life>
           {trail.map(({ height }, index) => (
-            <YearContainer style={{ height }}>
-              <div style={{ padding: '20px 10px' }}>{data[index].year}</div>
-              <div style={{ padding: '20px' }}>{data[index].happening}</div>
-            </YearContainer>
+            <Step style={{ height }}>
+              <Year style={{ padding: '20px 10px', minWidth: '100px' }}>{data[index].year}</Year>
+              <StepDesc>{data[index].happening}</StepDesc>
+            </Step>
           ))}
         </Life>
 

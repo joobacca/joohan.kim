@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { animated, useSpring } from 'react-spring';
 import { useHover } from 'react-use-gesture';
+import theme from '../theme';
 
 const ProjectTitle = styled.a`
   font-size: 1.3rem;
@@ -12,6 +13,22 @@ const ProjectTitle = styled.a`
 const Wrapper = styled(animated.div)`
   box-sizing: border-box;
   padding: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+`;
+
+const Desc = styled.p`
+  flex-grow: 1;
+`;
+
+const VisitLink = styled.a`
+  text-decoration: none;
+  color: ${theme.palette.primary};
+  align-self: flex-end;
+  &:visited {
+    color: ${theme.palette.primary};
+  }
 `;
 
 const Project = ({ data, ...props }) => {
@@ -28,18 +45,10 @@ const Project = ({ data, ...props }) => {
       <ProjectTitle href={url} rel="noopener noreferrer" target="_blank">
         {title}
       </ProjectTitle>
-      <hr />
-      <p>{description}</p>
-      <div style={{ textAlign: 'right' }}>
-        <a
-          href={url}
-          rel="noopener noreferrer"
-          target="_blank"
-          style={{ textDecoration: 'none' }}
-        >
-          Visit -&gt;
-        </a>
-      </div>
+      <Desc>{description}</Desc>
+      <VisitLink href={url} rel="noopener noreferrer" target="_blank">
+        Visit
+      </VisitLink>
     </Wrapper>
   );
 };

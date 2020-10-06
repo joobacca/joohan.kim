@@ -2,6 +2,7 @@ module.exports = {
   siteMetadata: {
     title: `Joo Han Kim`,
     description: `A web developer based in Emden, Germany.`,
+    siteUrl: `https://joohan.kim`,
     author: `@joobacca`,
   },
   plugins: [

@@ -9,6 +9,8 @@ import { device } from '../utils/breakpoints';
 import theme from '../theme';
 import Button from './Button';
 import useScrollToElement from '../hooks/useScrollToElement';
+import useMyPrettyFace from '../hooks/useMyPrettyFace';
+import useLogos from '../hooks/useLogos';
 
 const Container = styled.div`
   padding: 30px 0;
@@ -44,41 +46,25 @@ const Skills = styled.div`
 `;
 const Logo = styled(Img)`
   margin: 0 10px 0 0;
+  transition: transform 0.5s;
+  &:hover {
+    transform: scale(1.2);
+  }
 `;
 
 const About = () => {
-  const data = useStaticQuery(graphql`
-    {
-      file(relativePath: { eq: "images/joo.jpeg" }) {
-        childImageSharp {
-          fluid(maxWidth: 500) {
-            ...GatsbyImageSharpFluid_withWebp_tracedSVG
-          }
-        }
-      }
-      allFile(filter: { relativePath: { regex: "/images/logos/(.)*.png/" } }) {
-        nodes {
-          childImageSharp {
-            fixed(height: 50) {
-              ...GatsbyImageSharpFixed_tracedSVG
-            }
-          }
-          name
-        }
-      }
-    }
-  `);
+  const logos = useLogos();
+  const face = useMyPrettyFace();
+  const scrollTo = useScrollToElement();
 
   const { about, mylife } = theme.palette.section;
-  const { allFile } = data;
-  const scrollTo = useScrollToElement();
   return (
     <SectionContainer id="about">
       <Title color={about}>About myself</Title>
       <Container>
         <FlexChildren>
           <ScrollAnimation showOnce>
-            <Image fluid={data.file.childImageSharp.fluid} />
+            <Image fluid={face.file.childImageSharp.fluid} />
           </ScrollAnimation>
         </FlexChildren>
         <FlexChildren>
@@ -95,13 +81,14 @@ const About = () => {
             on my experience in implementing given design templates.
           </AboutText>
 
-          <div>My skills</div>
+          <div>My skills:</div>
           <Skills>
-            {allFile.nodes.map((image, i) => (
+            {logos.allFile.nodes.map((image, i) => (
               <Logo
                 key={image.name + i}
                 fixed={image.childImageSharp.fixed}
                 alt={`${image.name} logo`}
+                title={`${image.name}`}
               />
             ))}
           </Skills>

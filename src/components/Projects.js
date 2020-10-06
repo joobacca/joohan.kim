@@ -1,16 +1,10 @@
 import React from 'react';
-// import { useSpring } from 'react-spring';
-// import { useStaticQuery, graphql } from 'gatsby';
-// import Img from 'gatsby-image';
 import SectionContainer from './section/Container';
-// import ScrollAnimation from './ScrollAnimation';
-import Title from './section/Title';
 import styled from 'styled-components';
 import { device } from '../utils/breakpoints';
 import theme from '../theme';
-// import Button from './Button';
 import Project from './Project';
-// import useScrollToElement from '../hooks/useScrollToElement';
+import Title from './section/Title';
 
 const ProjectList = styled.div`
   display: grid;

@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import CurrentTime from './CurrentTime';
 
 const convertToHexString = value =>
-  value < 10 ? `0${value.toString()}` : `${value.toString()}`;
+  value < 16 ? `0${value.toString(16)}` : `${value.toString(16)}`;
 
 const getTimeInHex = time => {
   const str = `#${convertToHexString(time.getHours())}${convertToHexString(
@@ -14,20 +14,24 @@ const getTimeInHex = time => {
 };
 
 const StyledSectionContainer = styled(SectionContainer)`
-  background-color: ${({ color }) => color};
+  min-height: 100vh;
 `;
 
 const ColorClock = () => {
   const [color, setColor] = React.useState('#fff');
-  const callback = () => setColor(getTimeInHex(new Date()));
   React.useEffect(() => {
+    const callback = () => setColor(getTimeInHex(new Date()));
     setInterval(callback, 1000);
     return () => clearInterval(callback, 1000);
-  }, []);
+  }, [setColor]);
 
   return (
-    <StyledSectionContainer id="clock" color={color} style={{ minHeight: 'inherit' }}>
-      <CurrentTime />
+    <StyledSectionContainer
+      id="clock"
+      color={color}
+      style={{ minHeight: 'inherit', backgroundColor: color }}
+    >
+      <CurrentTime color={color} />
     </StyledSectionContainer>
   );
 };
