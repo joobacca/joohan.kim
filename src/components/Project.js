@@ -16,6 +16,7 @@ const Wrapper = styled(animated.div)`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  border-radius: 4px;
 `;
 
 const Desc = styled.p`

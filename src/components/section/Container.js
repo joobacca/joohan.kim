@@ -15,7 +15,7 @@ const Container = styled.section`
 `;
 
 const InnerContainer = styled.div`
-  padding: 10px;
+  padding: 10px 5%;
   margin: 0 200px;
   @media only screen and (${device.laptop}) {
     margin: 0 100px;

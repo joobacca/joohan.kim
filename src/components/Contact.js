@@ -15,11 +15,14 @@ import {
 const ContentContainer = styled.div`
   padding: 30px 0;
   width: 100%;
+  height: 50vh;
 `;
 
 const FlexContainer = styled.div`
   display: flex;
   justify-content: space-around;
+  height: 100%;
+  align-items: center;
   @media (${device.mobile}) {
     display: block;
   }

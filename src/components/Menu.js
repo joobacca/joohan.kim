@@ -57,7 +57,7 @@ const NavAnchor = ({ children, target, isVisible, ...props }) => {
       <Anchor onClick={() => scrollTo(target)} {...props}>
         {children}
         {transitions.map(
-          ({ item, key, props }) =>
+          ({ item, props }) =>
             item && <BottomBorder section={target} style={props} />,
         )}
       </Anchor>
@@ -97,6 +97,7 @@ const Menu = () => (
       <ListItem target="about">About</ListItem>
       <ListItem target="mylife">Curriculum</ListItem>
       <ListItem target="projects">Projects</ListItem>
+      <ListItem target="contact">Contact</ListItem>
     </NavList>
   </MenuContainer>
 );

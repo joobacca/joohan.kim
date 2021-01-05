@@ -31,7 +31,6 @@ const StepDesc = styled.div`
   }
 `;
 
-
 const data = [
   {
     year: '2013 - 2014',
@@ -72,10 +71,17 @@ const MyLife = () => {
 
         <Life>
           {trail.map(({ height }, index) => (
-            <Step style={{ height }}>
-              <Year style={{ padding: '20px 10px', minWidth: '100px' }}>{data[index].year}</Year>
-              <StepDesc>{data[index].happening}</StepDesc>
-            </Step>
+            <>
+              <Step style={{ height }}>
+                <Year style={{ padding: '20px 10px', minWidth: '100px' }}>
+                  {data[index].year}
+                </Year>
+                <StepDesc>{data[index].happening}</StepDesc>
+              </Step>
+              {index < trail.length - 1 && (
+                <div style={{ textAlign: 'center' }}>~</div>
+              )}
+            </>
           ))}
         </Life>
 
