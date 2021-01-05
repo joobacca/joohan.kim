@@ -11,7 +11,7 @@ module.exports = {
       resolve: `gatsby-plugin-htaccess`,
       options: {
         https: true,
-      }
+      },
     },
     {
       resolve: `gatsby-source-filesystem`,
@@ -40,14 +40,9 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-plugin-prefetch-google-fonts`,
+      resolve: `gatsby-plugin-google-fonts`,
       options: {
-        fonts: [
-          {
-            family: `Open Sans`,
-            variants: [`400, 700`],
-          },
-        ],
+        fonts: [`open sans:400,700`],
       },
     },
     `gatsby-plugin-styled-components`,
