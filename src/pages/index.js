@@ -6,6 +6,7 @@ import About from '../components/About';
 import MyLife from '../components/MyLife';
 import Projects from '../components/Projects';
 import Contact from '../components/Contact';
+import Footer from '../components/Footer';
 
 const IndexPage = () => {
   return (
@@ -17,6 +18,7 @@ const IndexPage = () => {
       <MyLife />
       <Projects />
       <Contact />
+      <Footer />
     </Layout>
   );
 };
