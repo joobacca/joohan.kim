@@ -6,7 +6,8 @@ const theme = {
       about: '#087CA7',
       mylife: '#ee3d3d',
       projects: '#5bfb87',
-    }
+      contact: '#ffbb00',
+    },
   },
   spacing: factor => factor * 8,
 };
