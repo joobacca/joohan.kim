@@ -3,15 +3,20 @@ import profilePic from '../static/profilepic.jpeg';
 import github from '../static/github.png';
 import youtube from '../static/youtube.png';
 import instagram from '../static/instagram.png';
-import { SocialImage } from '../components/SocialImage';
 import SocialLink from '../components/SocialLink';
+
+const title = 'Joo Han Kim | Web developer based in Hamburg';
+const description = 'Personal website of Joo Han Kim, a Full Stack Developer from Hamburg, Germany.'
 
 export default function Home() {
   return (
     <>
       <Head>
-        <title>Joo Han Kim | Web developer based in Hamburg</title>
+        <title>{title}</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+        <meta property="og:title" content={title} />
+        <meta property="og:description" content={description} />
+        <meta property="og:image" content={profilePic.src} />
       </Head>
       <div className='h-full flex flex-col justify-center items-center'>
         <div className='grow w-2/3 sm:w-1/3 md:w-1/4 flex flex-col justify-center items-center'>
