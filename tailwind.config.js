@@ -8,6 +8,9 @@ module.exports = {
       padding: {
         '1/2': '50%',
         '1': '100%'
+      },
+      maxWidth: {
+        'xxs': '50px',
       }
     },
   },
