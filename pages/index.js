@@ -1,8 +1,8 @@
 import Head from 'next/head';
-import profilePic from '../static/profilepic.jpeg';
-import github from '../static/github.png';
-import youtube from '../static/youtube.png';
-import instagram from '../static/instagram.png';
+import profilePic from '../public/profilepic.jpeg';
+import github from '../public/github.png';
+import youtube from '../public/youtube.png';
+import instagram from '../public/instagram.png';
 import SocialLink from '../components/SocialLink';
 
 const title = 'Joo Han Kim | Web developer based in Hamburg';
