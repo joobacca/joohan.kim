@@ -11,7 +11,7 @@ export default function Home() {
       <CustomHead />
       <div
         className="flex flex-col justify-center items-center"
-        style={{ height: 'calc(100% - 4rem)' }}
+        style={{ height: 'calc(100% - 40px)' }}
       >
         <div className="grow w-2/3 sm:w-1/3 md:w-1/4 flex flex-col justify-center items-center">
           <div className="w-full pb-1 relative">
