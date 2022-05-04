@@ -22,11 +22,13 @@ function Layout({ children }) {
 
   return (
     <>
-      <Box position="relative">
+      <Box position="relative" sx={{ height: '100%' }}>
         <IconButton aria-label="menu" onClick={() => setOpen(true)}>
           <MenuIcon />
         </IconButton>
-        <Container maxWidth="md">{children}</Container>
+        <Container maxWidth="md" sx={{ height: '100%' }}>
+          {children}
+        </Container>
       </Box>
       <Drawer anchor="left" open={open} onClose={closeDrawer}>
         <Box width={250} onClick={closeDrawer}>
