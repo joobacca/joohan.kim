@@ -23,10 +23,14 @@ function Layout({ children }) {
   return (
     <>
       <Box position="relative" sx={{ height: '100%' }}>
-        <IconButton aria-label="menu" onClick={() => setOpen(true)}>
+        <IconButton
+          aria-label="menu"
+          sx={{ margin: 2, position: 'absolute' }}
+          onClick={() => setOpen(true)}
+        >
           <MenuIcon />
         </IconButton>
-        <Container maxWidth="md" sx={{ height: '100%' }}>
+        <Container maxWidth="md" sx={{ height: 'calc(100% - 40px)' }}>
           {children}
         </Container>
       </Box>

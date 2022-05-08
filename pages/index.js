@@ -4,14 +4,20 @@ import instagram from '../public/instagram.png';
 import SocialLink from '../components/SocialLink';
 import profilePic from '../public/profilepic.jpeg';
 import CustomHead from '../components/Head';
+import { Box } from '@mui/material';
 
 export default function Home() {
   return (
     <>
       <CustomHead />
-      <div
-        className="flex flex-col justify-center items-center"
-        style={{ height: 'calc(100% - 40px)' }}
+      <Box
+        sx={{
+          display: 'flex',
+          flexDirection: 'column',
+          alignItems: 'center',
+          height: '100%',
+          pt: '50px',
+        }}
       >
         <div className="grow w-2/3 sm:w-1/3 md:w-1/4 flex flex-col justify-center items-center">
           <div className="w-full pb-1 relative">
@@ -51,7 +57,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-      </div>
+      </Box>
     </>
   );
 }
